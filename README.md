@@ -8,7 +8,7 @@
 
 
 
-# 错误： 
+# 错误
 教程是master分支 ，而现在是main分支 
 
 ```
@@ -27,3 +27,9 @@ git push -u origin main
  git reset --hard 1094a
  git reflog
 ```
+
+# 概念
+>工作区 
+>暂存区 （stage)   
+>head:指针  
+>main：最先创建的主分支
