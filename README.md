@@ -88,3 +88,10 @@ git clone git@github.com:michaelliao/gitskills.git
 ```
 
 
+# 创建分支
+```
+git checkout -b dev
+git branch dev
+git checkout dev
+
+```
