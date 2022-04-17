@@ -1,10 +1,15 @@
-# gittest
+>> git 命令学习
+
+
+[TOC]
+
 
 
 # 警告
 使用Windows的童鞋要特别注意：
 
 千万不要使用Windows自带的记事本编辑任何文本文件。原因是Microsoft开发记事本的团队使用了一个非常弱智的行为来保存UTF-8编码的文件，他们自作聪明地在每个文件开头添加了0xefbbbf（十六进制）的字符，你会遇到很多不可思议的问题，比如，网页第一行可能会显示一个“?”，明明正确的程序一编译就报语法错误，等等，都是由记事本的弱智行为带来的。建议你下载Visual Studio Code代替记事本，不但功能强大，而且免费！
+
 
 
 
@@ -88,10 +93,41 @@ git clone git@github.com:michaelliao/gitskills.git
 ```
 
 
-# 创建分支
+# 操作分支
 ```
 git checkout -b dev
 git branch dev
 git checkout dev
+
+git add readme.txt 
+git checkout master
+git merge dev
+
+git branch -d dev
+git branch
+```
+
+
+```
+查看分支：git branch
+创建分支：git branch <name>
+切换分支：git checkout <name>或者git switch <name>
+创建+切换分支：git checkout -b <name>或者git switch -c <name>
+合并某分支到当前分支：git merge <name>
+删除分支：git branch -d <name>
+```
+
+
+# 标签
+```
+    命令git tag <tagname>用于新建一个标签，默认为HEAD，也可以指定一个commit id；
+    命令git tag -a <tagname> -m "blablabla..."可以指定标签信息；
+    命令git tag可以查看所有标签。
+
+    命令git push origin <tagname>可以推送一个本地标签；
+    命令git push origin --tags可以推送全部未推送过的本地标签；
+    命令git tag -d <tagname>可以删除一个本地标签；
+    命令git push origin :refs/tags/<tagname>可以删除一个远程标签。
+
 
 ```
