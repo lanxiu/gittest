@@ -33,3 +33,58 @@ git push -u origin main
 >暂存区 （stage)   
 >head:指针  
 >main：最先创建的主分支
+
+
+# 撤销修改
+
+```
+git checkout -- readme.txt  
+回到最近一次git commit或git add时的状态
+一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；
+
+一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
+注意:都是修改，第二种情况是如下操作 git add xxx   手工修改文件   git checkout
+
+
+git reset HEAD readme.txt
+
+从暂存区回退到工作区
+
+git checkout 
+
+从工作区取消修改
+
+
+```
+
+
+# 删除文件
+
+```
+
+git rm aa.txt
+git commit
+git checkout  "还原删错的文件"
+
+```
+
+
+#  添加远程库
+```
+
+git remote add origin git@github.com:michaelliao/learngit.git
+第一次 -u,建立关联，之后省略
+git push -u origin master
+git push origin master
+
+删远程库
+git remote -v
+
+git remote rm origin
+
+
+git clone git@github.com:michaelliao/gitskills.git
+
+```
+
+
